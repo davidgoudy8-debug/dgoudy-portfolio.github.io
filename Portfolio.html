@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[Your Name] | Portfolio</title>
+    <meta name="description" content="Portfolio of [Your Name], [your program/field]. Projects, skills, certifications and resume.">
+    <style>
+        :root {
+            --page:#eef2f6; --dot:#d3dce6; --panel:#ffffff; --card:#f6f9fc;
+            --fg:#1a1f24; --muted:#58636e; --line:#d9e0e7;
+            --accent:#1f5f8b; --accent-soft:#e3eef6; --link:#1f5f8b;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page:#12171c; --dot:#1e262e; --panel:#171d23; --card:#1d252d;
+                --fg:#e8edf1; --muted:#9aa7b3; --line:#2b353f;
+                --accent:#6cb2e0; --accent-soft:#1f2f3c; --link:#8cc4ec;
+            }
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+        body {
+            margin:0; color:var(--fg);
+            background-color:var(--page);
+            background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+            background-size: 18px 18px;
+            font:17px/1.6 Georgia, "Times New Roman", serif;
+        }
+        a { color:var(--link); }
+
+        /* Sticky nav */
+        header {
+            position: sticky; top: 0; z-index: 10;
+            background: var(--panel);
+            border-bottom: 3px solid var(--accent);
+        }
+        nav {
+            max-width: 760px; margin: 0 auto; padding: 0 20px;
+            display: flex; flex-wrap: wrap; gap: 4px 4px;
+        }
+        nav a {
+            padding: 14px 12px; text-decoration: none; color: var(--fg);
+            font-family: Arial, Helvetica, sans-serif; font-size: 15px;
+        }
+        nav a:hover, nav a:focus { background: var(--accent-soft); color: var(--accent); }
+
+        main {
+            max-width: 760px; margin: 0 auto; padding: 0 28px;
+            background: var(--panel);
+            border-left: 1px solid var(--line); border-right: 1px solid var(--line);
+        }
+        section { padding: 36px 0; border-bottom: 1px solid var(--line); }
+        section:last-of-type { border-bottom: 0; }
+
+        h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; line-height: 1.25; }
+        h1 { font-size: 34px; margin: 0 0 4px; }
+        h2 { font-size: 24px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); display: inline-block; }
+        h3 { font-size: 18px; margin: 24px 0 4px; color: var(--accent); }
+
+        .muted { color: var(--muted); }
+        .label { font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+        .photo {
+            float: right; width: 150px; height: 150px; object-fit: cover;
+            margin: 0 0 12px 20px; border: 3px solid var(--accent-soft); outline: 1px solid var(--line);
+        }
+
+        .project {
+            margin-bottom: 28px; padding: 4px 20px 12px;
+            background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+        }
+        ul { padding-left: 20px; }
+
+        table { border-collapse: collapse; width: 100%; }
+        th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+        th { background: var(--accent-soft); font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+
+        form { display: grid; gap: 10px; max-width: 480px; }
+        label { font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+        input, textarea {
+            width: 100%; padding: 8px; font: inherit; color: var(--fg);
+            background: var(--card); border: 1px solid var(--muted);
+        }
+        input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+        button {
+            padding: 9px 20px; font: inherit; font-family: Arial, Helvetica, sans-serif; cursor: pointer;
+            color: #fff; background: var(--accent); border: 1px solid var(--accent);
+        }
+        button:hover { filter: brightness(1.1); }
+
+        footer {
+            max-width: 760px; margin: 0 auto; padding: 20px 28px 40px;
+            font-size: 15px; color: var(--muted);
+            background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--accent);
+        }
+
+        .artifact { margin: 16px 0; }
+        .artifact img {
+            max-width: 100%; height: auto; display: block;
+            border: 1px solid var(--line); background: var(--card);
+        }
+        .artifact figcaption { margin-top: 8px; font-size: 15px; }
+
+        @media (max-width: 520px) {
+            html { scroll-padding-top: 110px; }
+            nav a { padding: 10px 8px; font-size: 14px; }
+            main { padding: 0 16px; }
+            .photo { float: none; display: block; margin: 0 0 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills &amp; Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <img class="photo" src="photo.jpg" alt="Can't import pics for some reason">
+        <h1>David Goudy</h1>
+        <p class="muted">Computer Systems Technology at Saskatchewan Polytechnic</p>
+
+        <p>My workplace experience and classroom endeavors have honed my expertise in the area of cybersecurity.
+            I hope to use my skills effectively in a suitable cybersecurity analyst position.</p>
+
+        <h3>Background</h3>
+        <p>I am a second-year Computer Systems Technology student at Saskatchewan Polytechnic. I have
+            hands-on experience with incident response, threat management, and playbook management and implementation.
+            Ever since I was old enough to type, I was messing around with the settings of my computer. I never
+            would have guessed how far that would take me.</p>
+
+        <h3>Career goals</h3>
+        <p>After graduating from Computer Systems Technology, I would like to further my education in the area
+            of computer science, specifically in cybersecurity. Once I am ready to put my schooling to work,
+            I hope to be part of an online security team, working towards a safe but usable interface.
+        </p>
+
+        <h3>What makes me different</h3>
+        <p>My passions aside from computer science still rely heavily on computers. In my free time, I shoot photos
+            and videos, which I edit and color grade on my computer. If I am not in my room editing or doing school,
+            I can usually be found in the gym working out, or with a friend going for a walk.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Skills &amp; Certifications</h2>
+
+        <h3>Technical skills</h3>
+        <table>
+            <tr><th>Area</th><th>Skills</th></tr>
+            <tr><td>Languages</td><td>Java, JavaScript, SQL, HTML/CSS</td></tr>
+            <tr><td>Frameworks &amp; tools</td><td>WebStorm, Git, VS Code, GitHub</td></tr>
+            <tr><td>Databases</td><td>MySQL, SQLite</td></tr>
+            <tr><td>Cloud &amp; systems</td><td>AWS, Linux, Azure, Windows 365</td></tr>
+            <tr><td>Security &amp; networking</td><td>Firewalls, TCP/IP, basic penetration testing through labs</td></tr>
+        </table>
+
+        <figure class="artifact">
+            <a href="images/ec-council-lab-module01.png">
+                <img src="images/ec-council-lab-module01.png" alt="EC-Council lab page for Information Security Threats and Vulnerabilities, Module 01">
+            </a>
+            <figcaption>
+                <span class="label">Artifact 1:</span> Security Lab Testing.
+                <span class="muted">This was one of the first labs in my Security course, a hands-on lab run on Hyper-V that introduced the basics of information security threats and vulnerabilities.</span>
+            </figcaption>
+        </figure>
+        <p><span class="label">Artifact 2:</span> <a href="[link to artifact]">Gym Database and Website Project</a><br>
+            <span class="muted">I used JavaScript, HTML, CSS, and SQL to create a gym website for members. This
+            was a fun project, and it turned out very well.</span></p>
+
+        <h3>Soft skills</h3>
+        <ul>
+            <li>Teamwork</li>
+            <li>Problem-solving</li>
+            <li>Communication</li>
+            <li>Computer savvy</li>
+            <li>Resilient</li>
+        </ul>
+
+        <h3>Certifications</h3>
+        <ul>
+            <li>[Certification name], [Issuer], [Year] (<a href="[credential link]">verify</a>)</li>
+            <li>[Certification name], [Issuer], [Year]</li>
+            <li>[In progress: certification name, expected date]</li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <!-- PROJECT 1 -->
+        <div class="project">
+            <h3>1. Defending against Cyber-Security Threats</h3>
+            <p>Created and documented security playbooks for a company I was working with. I was tasked with
+                monitoring incoming security threats to create tasks in order to resolve them and eventually
+                stop them.</p>
+            <p><span class="label">Technologies:</span> Microsoft Sentinel, Microsoft Defender, other M365 tools</p>
+            <p><span class="label">My role and challenges solved:</span> I was responsible for the incoming and present security threats,
+                as well as the documentation of the threat and steps to resolve it. I had to learn to identify the attack
+                swiftly in order to effectively disarm it.</p>
+            <ul>
+                <li><span class="label">Situation:</span> Incoming security threats in Microsoft Defender.</li>
+                <li><span class="label">Task:</span> Resolve and document the incident.</li>
+                <li><span class="label">Actions:</span> Researched and monitored the incident, documented the important
+                    parts, and created steps to stop that incident from happening again.</li>
+                <li><span class="label">Results:</span> Reduced the load of security incidents and allowed clients'
+                    data to be better guarded.</li>
+            </ul>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project">
+            <h3>2. Gym website</h3>
+            <p>My partner and I planned, drafted, and created a fake gym's website for a school project. It
+                was a lot of fun and resulted in a good grade.</p>
+            <p><span class="label">Technologies:</span> HTML, CSS, JavaScript</p>
+            <p><span class="label">My role and challenges solved:</span> We spent weeks developing the framework and
+                choosing the color scheme of the website, as well as the user interface. I enjoyed designing what the
+                website would look like, so I added a lot of design elements.</p>
+            <ul>
+                <li><span class="label">Situation:</span> Tasked with completing a website.</li>
+                <li><span class="label">Task:</span> Design and create a friendly website suitable for a gym.</li>
+                <li><span class="label">Actions:</span> Used CSS and HTML to complete the assignment.</li>
+                <li><span class="label">Results:</span> We received a good grade, and I was happy with how it turned out.</li>
+            </ul>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project">
+            <h3>3. Cyber-Security Labs</h3>
+            <p>I was tasked with completing security labs for one of my classes. They use virtual machines to
+                simulate a hostile environment in order for me to learn how to disarm a potential threat.</p>
+            <p><span class="label">Technologies:</span> EC-Council</p>
+            <p><span class="label">My role and challenges solved:</span> I took the role of both attacker
+                and defender to ensure I understood the threat and what it is able to do.</p>
+            <ul>
+                <li><span class="label">Situation:</span> Complete cyber-security labs.</li>
+                <li><span class="label">Task:</span> Assume the role of attacker and defender.</li>
+                <li><span class="label">Actions:</span> Followed guidelines and class notes to succeed.</li>
+                <li><span class="label">Results:</span> I learned a lot during the labs and completed them on time.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <p><a href="resume.pdf" download>Download my resume (PDF)</a> No resume for privacy reasons.</p>
+
+        <h3>Education</h3>
+        <p>Computer Systems Technology, Saskatchewan Polytechnic, expected to graduate in summer 2027.<br>
+            <span class="muted">Relevant coursework: SCEC, COSC, CWEB</span></p>
+
+        <h3>Experience</h3>
+        <p>Cyber-Security, NGIT Services, June 1, 2026 - September 5, 2026<br>
+            <span class="muted">Worked alongside security professionals to keep our clients' data secure.</span></p>
+
+        <h3>Technical skills &amp; certifications</h3>
+        <p>JavaScript, SQL, Linux, CompTIA, Xtreme Labs, WHMIS, ISSA Certified Personal Trainer,
+            First Aid / AED Certified, National Lifeguard</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            Email: <a href="mailto:email@example.com">davidgoudy4@gmail.com</a><br>
+            Phone: <a href="https://exmample.phone/in/your-handle">306-921-4112</a><br>
+            GitHub: <a href="https://github.com/your-handle">davidgoudy4-debug</a>
+        </p>
+
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+            <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+            <div><button type="submit">Send</button></div>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>Created by David Goudy. Last updated: October 30, 2026.</p>
+</footer>
+
+</body>
+</html>
